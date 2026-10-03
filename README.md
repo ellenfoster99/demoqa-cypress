@@ -23,11 +23,9 @@ Before installing the project, make sure the following tools are installed:
 
 ### Check Node.js
 
-```bash
 node -v
 ```
 
-```bash
 npm -v
 ```
 
@@ -39,13 +37,11 @@ This project uses Node.js `24.13.1`.
 
 Clone the repository:
 
-```bash
 git clone https://github.com/ellenfoster99/demoqa-cypress.git
 ```
 
 Navigate to the project directory:
 
-```bash
 cd demoqa-cypress
 ```
 
@@ -55,7 +51,6 @@ cd demoqa-cypress
 
 Install the project dependencies:
 
-```bash
 npm install
 ```
 
@@ -69,13 +64,11 @@ This project uses **Eclipse Temurin / OpenJDK 25**.
 
 Check the Java installation:
 
-```bash
 java -version
 ```
 
 Example Java installation path:
 
-```text
 C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot
 ```
 
@@ -83,13 +76,11 @@ C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot
 
 Create a system environment variable:
 
-```text
 JAVA_HOME
 ```
 
 Set its value to the Java installation path:
 
-```text
 C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot
 ```
 
@@ -103,13 +94,11 @@ C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot
 
 For Java:
 
-```text
 %JAVA_HOME%\bin
 ```
 
 For Allure:
 
-```text
 C:\HTML\allure-2.46.1\bin
 ```
 
@@ -122,7 +111,6 @@ C:\HTML\allure-2.46.1\bin
 
 The project uses:
 
-```text
 @mmisty/cypress-allure-adapter
 ```
 
@@ -130,25 +118,21 @@ to integrate Cypress with Allure Report.
 
 After running Cypress:
 
-```bash
 npx cypress run
 ```
 
 the test results are generated in:
 
-```text
 allure-results
 ```
 
 Generate the Allure HTML report with:
 
-```bash
 allure generate allure-results --clean -o allure-report
 ```
 
 Open the generated report with:
 
-```bash
 allure open allure-report
 ```
 
@@ -160,13 +144,11 @@ This project uses **Allure Commandline 2.46.1**.
 
 After downloading Allure, extract it, for example, to:
 
-```text
 C:\HTML\allure-2.46.1
 ```
 
 Add the following directory to the system `Path` variable:
 
-```text
 C:\HTML\allure-2.46.1\bin
 ```
 
@@ -174,13 +156,11 @@ After changing the environment variables, open a **new Terminal**.
 
 Check the Allure installation:
 
-```bash
 allure --version
 ```
 
 Expected output:
 
-```text
 2.46.1
 ```
 
@@ -190,7 +170,6 @@ Expected output:
 
 ## Run Cypress in Interactive Mode
 
-```bash
 npx cypress open
 ```
 
@@ -198,13 +177,11 @@ Select **E2E Testing** and choose the required test.
 
 ## Run Tests in Headless Mode
 
-```bash
 npx cypress run
 ```
 
 ## Generate Allure Report
 
-```bash
 allure generate allure-results --clean -o allure-report
 ```
 
@@ -231,19 +208,15 @@ To add a new test:
 
 Main commands:
 
-```bash
 npx cypress open
 ```
 
-```bash
 npx cypress run
 ```
 
-```bash
 allure generate allure-results --clean -o allure-report
 ```
 
-```bash
 allure open allure-report
 ```
 
