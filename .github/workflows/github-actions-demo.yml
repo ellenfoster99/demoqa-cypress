@@ -27,6 +27,13 @@ jobs:
         with:
           browser: chrome
 
+      - name: Check Allure results
+        if: always()
+        run: |
+          echo "Checking allure-results..."
+          ls -la
+          ls -la allure-results || true    
+
       - name: Load test report history
         uses: actions/checkout@v7
         if: always()
