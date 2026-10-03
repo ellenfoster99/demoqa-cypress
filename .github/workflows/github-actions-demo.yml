@@ -32,23 +32,14 @@ jobs:
         run: |
           echo "Checking allure-results..."
           ls -la
-          ls -la allure-results || true    
-
-      - name: Load test report history
-        uses: actions/checkout@v7
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+          ls -la allure-results || true
 
       - name: Build Allure report
         uses: simple-elf/allure-report-action@v1.15
         if: always()
         with:
-          gh_pages: gh-pages
-          allure_history: allure-history
           allure_results: allure-results
+          allure_history: allure-history
 
       - name: Publish Allure report
         uses: peaceiris/actions-gh-pages@v4
